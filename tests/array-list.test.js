@@ -54,7 +54,7 @@ describe("CharacterList", () => {
         list.append('A');
         list.append('B');
         let clone = list.clone();
-        expect(clone.length()).toBe(0);
+        expect(clone.length()).toBe(2);
         expect(clone.get(0)).toBe('A');
         expect(clone.get(1)).toBe('B');
     });
@@ -64,7 +64,7 @@ describe("CharacterList", () => {
         list.append('B');
         list.append('C');
         list.reverse();
-        expect(list.get(0)).toBe('D');
+        expect(list.get(0)).toBe('C');
         expect(list.get(1)).toBe('B');
         expect(list.get(2)).toBe('A');
     });
@@ -90,6 +90,6 @@ describe("CharacterList", () => {
         list2.append('Y');
         list1.extend(list2);
         expect(list1.length()).toBe(2);
-        expect(list1.get(1)).toBe('Z');
+        expect(list1.get(1)).toBe('Y');
     });    
 });

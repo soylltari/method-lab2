@@ -62,44 +62,4 @@ class CharacterList {
         this._list = this._list.concat(elements._list);
     }
 }
-
-// Checking the functionality of CharacterList
-let list = new CharacterList();
-list.append('A');
-list.append('B');
-list.append('C');
-list.append('A');
-console.log(list, ", length: ", list.length());
-
-list.insert('D', 1);
-console.log("Insert: ", list.get(1));
-
-list.delete(2); // B
-console.log("List length after using method delete: ", list.length());
-
-list.deleteAll('A');
-console.log("List length after using method deleteAll: ",list.length());
-
-console.log("Find first: ",list.findFirst('C'));
-console.log("Find last: ", list.findLast('D'));
-
-console.log(list);
-list.reverse();
-console.log("Reverse: ", list);
-
-let clonedList = list.clone();
-console.log("Cloned list: ", clonedList);
-
-list.clear();
-console.log("List length after using method clear: ", list.length());
-
-let list1 = new CharacterList();
-list1.append('X');
-list1.append('Y');
-
-let list2 = new CharacterList();
-list2.append('A');
-list2.append('B');
-
-list1.extend(list2);
-console.log("Extend: ", list1);
+module.exports = CharacterList;

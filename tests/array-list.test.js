@@ -1,4 +1,4 @@
-const CharacterList = require("../array-list");
+const CharacterList = require("../list-implementation");
 
 describe("CharacterList", () => {
     let list;

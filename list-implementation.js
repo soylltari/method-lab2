@@ -193,5 +193,19 @@ class CharacterList {
             count--;
         }
     }
+
+    toString() {
+        if (!this.head) return '[]';
+        let result = [];
+        let current = this.head;
+        let count = this.size;
+        while (count > 0) {
+            result.push(current.value);
+            current = current.next;
+            count--;
+        }
+        return `[${result.join(' -> ')}]`;
+    }
+    
 }
 module.exports = CharacterList;
